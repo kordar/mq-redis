@@ -1,4 +1,4 @@
-module github.com/kordar/mqredis
+module github.com/kordar/mq-redis
 
 go 1.23.0
 

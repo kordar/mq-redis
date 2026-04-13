@@ -375,29 +375,29 @@ type Metrics interface {
 
 `Options` 主要字段说明：
 
-| 字段 | 说明 |
-| --- | --- |
-| `Addr` | 单个 Redis 地址 |
-| `Addrs` | 多个 Redis 地址，适用于 UniversalClient |
-| `Password` | Redis 密码 |
-| `DB` | Redis DB |
-| `MasterName` | Sentinel 主节点名称 |
-| `Group` | Consumer Group 名称 |
-| `Consumer` | 当前消费者名称 |
-| `Concurrency` | Worker 并发数 |
-| `MaxRetry` | 最大重试次数 |
-| `Block` | `XREADGROUP` 阻塞时长 |
-| `MaxLen` | Stream 最大长度 |
-| `ClaimIdle` | Pending 多久后允许接管 |
-| `ClaimBatch` | 每次恢复 Pending 的扫描数量 |
-| `RecoverInterval` | Pending 恢复扫描间隔 |
-| `DelayCheckInterval` | 延迟消息扫描间隔 |
-| `DelayBatch` | 每次搬运延迟消息的数量 |
-| `IdempotencyTTL` | 幂等锁 TTL |
-| `RetryPolicy` | 自定义重试策略 |
-| `Metrics` | 指标实现 |
-| `IdempotencyStore` | 自定义幂等存储 |
-| `RedisClient` | 外部注入的 `redis.UniversalClient` |
+| 字段                   | 说明                              |
+| -------------------- | ------------------------------- |
+| `Addr`               | 单个 Redis 地址                     |
+| `Addrs`              | 多个 Redis 地址，适用于 UniversalClient |
+| `Password`           | Redis 密码                        |
+| `DB`                 | Redis DB                        |
+| `MasterName`         | Sentinel 主节点名称                  |
+| `Group`              | Consumer Group 名称               |
+| `Consumer`           | 当前消费者名称                         |
+| `Concurrency`        | Worker 并发数                      |
+| `MaxRetry`           | 最大重试次数                          |
+| `Block`              | `XREADGROUP` 阻塞时长               |
+| `MaxLen`             | Stream 最大长度                     |
+| `ClaimIdle`          | Pending 多久后允许接管                 |
+| `ClaimBatch`         | 每次恢复 Pending 的扫描数量              |
+| `RecoverInterval`    | Pending 恢复扫描间隔                  |
+| `DelayCheckInterval` | 延迟消息扫描间隔                        |
+| `DelayBatch`         | 每次搬运延迟消息的数量                     |
+| `IdempotencyTTL`     | 幂等锁 TTL                         |
+| `RetryPolicy`        | 自定义重试策略                         |
+| `Metrics`            | 指标实现                            |
+| `IdempotencyStore`   | 自定义幂等存储                         |
+| `RedisClient`        | 外部注入的 `redis.UniversalClient`   |
 
 ## 优雅关闭
 
@@ -445,3 +445,4 @@ if err := mq.Shutdown(ctx); err != nil {
 - 批量消费
 - 消息编解码器抽象
 - 更完善的管理与观测接口
+
